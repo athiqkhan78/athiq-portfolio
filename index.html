@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Athiq Ur Rehaman — IT Support Engineer & System Administrator</title>
-<meta name="description" content="CCNA-certified IT Support Engineer & System Administrator with 3+ years running end-to-end IT operations. Microsoft 365, Intune, Freshdesk, Windows Server. Remote-ready, Bengaluru (IST).">
+<meta name="description" content="CCNA & AWS-certified IT Support Engineer & System Administrator with 3+ years running end-to-end IT operations. Microsoft 365, Intune, Freshdesk, Windows Server, PowerShell. Remote-ready, Bengaluru (IST).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@ body{
 .wrap{max-width:960px;margin:0 auto;padding:0 24px}
 h1,h2,h3{font-family:'Fraunces',serif}
 
-/* Nav */
+/* Navigation */
 nav{
   position:sticky;top:0;z-index:50;
   background:rgba(246,243,236,.92);backdrop-filter:blur(8px);
@@ -52,7 +52,7 @@ header{padding:68px 0 48px;border-bottom:2px solid var(--ink)}
 .kicker{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .kicker::before{content:"● ";font-size:10px;vertical-align:2px}
 h1{font-size:clamp(38px,6vw,58px);line-height:1.05;font-weight:700;margin-bottom:16px}
-.tagline{font-size:19px;color:var(--muted);max-width:680px;margin-bottom:28px}
+.tagline{font-size:19px;color:var(--muted);max-width:700px;margin-bottom:28px}
 .tagline strong{color:var(--ink)}
 .contact-row{display:flex;flex-wrap:wrap;gap:10px}
 .chip{
@@ -105,7 +105,7 @@ section{padding:60px 0}
 .pss dd ul{list-style:none;padding:0}
 .pss dd li{padding-left:18px;position:relative;margin-bottom:5px}
 .pss dd li::before{content:"—";position:absolute;left:0;color:var(--accent)}
-.pss .result dd{font-weight:600;color:var(--accent)}
+.pss dd.result{font-weight:600;color:var(--accent)}
 .case .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-family:var(--mono);font-size:11.5px;background:var(--accent-soft);color:var(--accent);padding:3px 10px;border-radius:999px}
 
@@ -132,17 +132,19 @@ section{padding:60px 0}
 .job .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px}
 .job h3{font-size:19px}
 .job .co{font-size:14.5px;color:var(--muted);margin-bottom:10px}
+.job .desc{font-size:15px;color:var(--ink);margin-top:4px}
 .job ul{list-style:none;margin-top:4px}
 .job li{font-size:15px;padding:3px 0 3px 18px;position:relative}
 .job li::before{content:"—";position:absolute;left:0;color:var(--accent)}
 @media(max-width:640px){.job{grid-template-columns:1fr;gap:6px}}
 
-/* Certs */
+/* Certifications */
 .cert-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
 .cert{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);padding:18px 20px;border-radius:2px}
-.cert .badge{flex:none;width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:500}
+.cert .badge{flex:none;width:42px;height:42px;border-radius:50%;background:var(--accent);color:#fff;font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:500}
 .cert h3{font-size:15.5px;margin-bottom:2px}
 .cert p{font-size:13.5px;color:var(--muted)}
+.cert .status{display:inline-block;margin-top:6px;font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:999px;font-weight:500}
 
 /* Remote readiness */
 .remote-band{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:28px 30px}
@@ -158,16 +160,16 @@ section{padding:60px 0}
 .faq .a{padding:0 20px 16px;font-size:15px;color:var(--muted)}
 
 /* Footer / CTA */
-.cta{background:var(--ink);color:var(--paper);padding:60px 0;margin-top:24px}
-.cta h2{font-size:clamp(26px,4vw,36px);margin-bottom:12px}
-.cta p{color:#b8c2ca;max-width:580px;margin-bottom:24px}
+.cta{background:var(--ink);color:var(--paper);padding:64px 0;margin-top:24px}
+.cta h2{font-size:clamp(26px,4vw,36px);margin-bottom:14px}
+.cta p{color:#d0dae2;max-width:620px;margin-bottom:26px;font-size:16.5px}
 .cta .chip{border-color:var(--paper);color:var(--paper);background:transparent}
 .cta .chip:hover{background:var(--paper);color:var(--ink)}
 .cta .chip.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .cta .chip.primary:hover{background:#12856f;color:#fff}
 footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12px;padding:18px 0;border-top:1px solid #22313d}
 
-/* Reveal */
+/* Scroll Reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
 .rv.in{opacity:1;transform:none}
 
@@ -200,7 +202,7 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
   <div class="wrap">
     <div class="kicker">Available immediately · Remote-ready · Bengaluru, India (IST / UTC+5:30)</div>
     <h1>Athiq Ur Rehaman</h1>
-    <p class="tagline"><strong>IT Support Engineer & System Administrator.</strong> CCNA-certified, 3+ years running end-to-end IT operations as a one-person IT department — Microsoft 365, Intune, Freshdesk, Windows Server, and everything in between.</p>
+    <p class="tagline"><strong>IT Support Engineer & System Administrator.</strong> CCNA & AWS-certified with 3+ years running end-to-end IT operations as a one-person IT department — Microsoft 365, Intune, Freshdesk, Windows Server, PowerShell, and everything in between.</p>
     <div class="contact-row">
       <a class="chip primary" href="mailto:athiqkhan.edu@gmail.com">athiqkhan.edu@gmail.com</a>
       <a class="chip" href="tel:+918884897872">+91 88848 97872</a>
@@ -225,7 +227,7 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
       <div class="about-main rv">
         <p>I've spent the last three years as the <strong>only IT person in the room</strong> — which means there was never anyone to escalate to. If the server failed, the Wi-Fi dropped, a new hire needed a laptop, or a director couldn't get into their mailbox, it was mine to fix, end to end.</p>
         <p>That environment taught me three things: how to <strong>prioritise under pressure</strong>, how to <strong>document everything</strong> so systems survive without me hovering over them, and how to communicate technical issues in plain language to non-technical people — from interns to management.</p>
-        <p>My core stack is <strong>Microsoft 365 / Entra ID, Intune, Freshdesk, and Windows Server</strong>, backed by CCNA-level networking. Most of my day-to-day support has always been remote (AnyDesk, Quick Assist, Teams), so distributed, remote-first teams are my natural working mode — not an adjustment.</p>
+        <p>My core stack is <strong>Microsoft 365 / Entra ID, Intune, Freshdesk, and Windows Server</strong>, backed by CCNA-level networking and AWS Cloud Practitioner certification. Most of my day-to-day support has always been remote (AnyDesk, Quick Assist, Teams), so distributed, remote-first teams are my natural working mode — not an adjustment.</p>
       </div>
       <div class="fact-card rv">
         <div class="head">Quick Facts</div>
@@ -233,7 +235,7 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
           <dt>Location</dt><dd>Bengaluru, India (IST / UTC+5:30)</dd>
           <dt>Notice period</dt><dd>Zero — immediate joiner</dd>
           <dt>Work mode</dt><dd>Remote / hybrid / on-site</dd>
-          <dt>Timezone overlap</dt><dd>Comfortable with AU, PH & flexible shifts</dd>
+          <dt>Timezone overlap</dt><dd>Comfortable with AU, PH, US & flexible shifts</dd>
           <dt>Languages</dt><dd>English, Hindi, Kannada</dd>
         </dl>
       </div>
@@ -307,6 +309,21 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
       <div class="tags"><span class="tag">Intune</span><span class="tag">Entra ID</span><span class="tag">Multi-site</span><span class="tag">Remote Support</span><span class="tag">Documentation</span></div>
     </div>
 
+    <div class="case rv">
+      <div class="case-meta">Entrepreneurial Initiative · ByteBlitz</div>
+      <h3>Building a Freelance IT Services Brand (ByteBlitz)</h3>
+      <dl class="pss">
+        <dt>Situation</dt><dd>Small businesses needed affordable, on-demand IT support but couldn't afford full-time IT staff.</dd>
+        <dt>Action</dt><dd><ul>
+          <li>Built a freelance IT services brand offering network setup, Microsoft 365 configuration, and hardware troubleshooting</li>
+          <li>Created a dedicated web presence and standardized service packages for predictable, transparent SMB delivery</li>
+          <li>Managed client onboarding, proactive maintenance, and backup workflows directly with business owners</li>
+        </ul></dd>
+        <dt class="result">Result</dt><dd class="result">Successfully assisted 8+ SMB clients, ensuring zero data loss and stable IT operations for growing businesses.</dd>
+      </dl>
+      <div class="tags"><span class="tag">IT Support</span><span class="tag">Networking</span><span class="tag">Client Management</span><span class="tag">M365</span></div>
+    </div>
+
   </div>
 </section>
 
@@ -316,27 +333,54 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
     <div class="skill-grid">
       <div class="skill-card rv">
         <h3>Microsoft 365 & Identity <span class="lvl">DAILY DRIVER</span></h3>
-        <ul><li>Exchange Online, Teams, SharePoint, OneDrive</li><li>Azure AD / Entra ID — provisioning, groups, licensing</li><li>MFA & Conditional Access policies</li></ul>
+        <ul>
+          <li>Exchange Online, Teams, SharePoint, OneDrive</li>
+          <li>Azure AD / Entra ID — provisioning, groups, licensing</li>
+          <li>MFA & Conditional Access policies</li>
+        </ul>
       </div>
       <div class="skill-card rv">
         <h3>Endpoint & Security <span class="lvl">DAILY DRIVER</span></h3>
-        <ul><li>Microsoft Intune (MD-102), MDM compliance</li><li>BitLocker, Group Policy, patch management</li><li>Access control & antivirus administration</li></ul>
+        <ul>
+          <li>Microsoft Intune (MD-102), MDM compliance</li>
+          <li>Windows Autopilot (Concepts & Zero-touch deployment)</li>
+          <li>Familiar with modern MDM & EDR concepts (Jamf, Kandji, SentinelOne)</li>
+          <li>BitLocker, Group Policy, patch management</li>
+          <li>Access control & antivirus administration</li>
+        </ul>
       </div>
       <div class="skill-card rv">
         <h3>ITSM & Helpdesk <span class="lvl">DAILY DRIVER</span></h3>
-        <ul><li>Freshdesk — SLAs, routing, queues, escalation</li><li>Performance reporting & analytics</li><li>ITIL-aware processes & documentation</li></ul>
+        <ul>
+          <li>Freshdesk — SLAs, routing, queues, escalation</li>
+          <li>Performance reporting & analytics</li>
+          <li>ITIL-aware processes & documentation</li>
+        </ul>
       </div>
       <div class="skill-card rv">
         <h3>Networking <span class="lvl">CCNA CERTIFIED</span></h3>
-        <ul><li>TCP/IP, DNS, DHCP, VPN</li><li>VLANs, routing & switching</li><li>LAN/WAN & Wi-Fi administration</li></ul>
+        <ul>
+          <li>TCP/IP, DNS, DHCP, VPN</li>
+          <li>VLANs, routing & switching</li>
+          <li>LAN/WAN & Wi-Fi administration</li>
+        </ul>
       </div>
       <div class="skill-card rv">
-        <h3>Systems & Cloud <span class="lvl">STRONG</span></h3>
-        <ul><li>Windows Server 2016/2019/2022, Active Directory, GPO</li><li>OS imaging, backup & recovery, PowerShell (basic)</li><li>AWS Cloud Practitioner — certification in progress</li></ul>
+        <h3>Systems & Cloud <span class="lvl">AWS CERTIFIED</span></h3>
+        <ul>
+          <li>Windows Server 2016/2019/2022, Active Directory, GPO</li>
+          <li>PowerShell Scripting & Microsoft Graph API automation</li>
+          <li>OS imaging, backup & recovery</li>
+          <li>AWS Certified Cloud Practitioner</li>
+        </ul>
       </div>
       <div class="skill-card rv">
         <h3>Remote Support <span class="lvl">STRONG</span></h3>
-        <ul><li>TeamViewer, AnyDesk, Quick Assist, RDP</li><li>Windows 10/11, macOS, ChromeOS, Ubuntu (basic)</li><li>Google Workspace administration</li></ul>
+        <ul>
+          <li>TeamViewer, AnyDesk, Quick Assist, RDP</li>
+          <li>Windows 10/11, macOS, ChromeOS, Ubuntu (basic)</li>
+          <li>Google Workspace administration</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -373,6 +417,15 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
 <section id="experience" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head rv"><span class="no">05</span><h2>Experience</h2></div>
+
+    <div class="job rv">
+      <div class="when">Jun 2026 — Present</div>
+      <div>
+        <h3>Independent IT Consultant & Upskilling</h3>
+        <div class="co">ByteBlitz / Self-Employed · Remote</div>
+        <p class="desc">Took a deliberate period to focus on advanced cloud and endpoint certifications (AWS, MD-102) while providing freelance IT support to small businesses. Actively interviewing for long-term roles where I can take end-to-end ownership of IT operations.</p>
+      </div>
+    </div>
 
     <div class="job rv">
       <div class="when">Jan 2026 — Jun 2026</div>
@@ -434,10 +487,38 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
   <div class="wrap">
     <div class="sec-head rv"><span class="no">06</span><h2>Certifications</h2></div>
     <div class="cert-list">
-      <div class="cert rv"><div class="badge">CCNA</div><div><h3>Cisco Certified Network Associate</h3><p>Cisco Accredited Training Institute, 2024</p></div></div>
-      <div class="cert rv"><div class="badge">MD-102</div><div><h3>Endpoint Administrator</h3><p>Microsoft Learn — Intune, MDM, device compliance</p></div></div>
-      <div class="cert rv"><div class="badge">M365</div><div><h3>Microsoft 365 & Entra ID Administration</h3><p>Microsoft Learn badge series — identity protection, secure user access, Teams app management</p></div></div>
-      <div class="cert rv"><div class="badge">AWS</div><div><h3>AWS Cloud Practitioner</h3><p>Essentials & Technical Essentials completed — certification exam in progress</p></div></div>
+      <div class="cert rv">
+        <div class="badge">AWS</div>
+        <div>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p>Amazon Web Services — Cloud concepts, security, compliance, and core cloud architecture</p>
+          <span class="status">Certified</span>
+        </div>
+      </div>
+      <div class="cert rv">
+        <div class="badge">CCNA</div>
+        <div>
+          <h3>Cisco Certified Network Associate</h3>
+          <p>Cisco Accredited Training Institute, 2024</p>
+          <span class="status">Certified</span>
+        </div>
+      </div>
+      <div class="cert rv">
+        <div class="badge">MD-102</div>
+        <div>
+          <h3>Endpoint Administrator</h3>
+          <p>Microsoft Learn — Intune, MDM, device compliance, and modern endpoint security</p>
+          <span class="status">Completed</span>
+        </div>
+      </div>
+      <div class="cert rv">
+        <div class="badge">M365</div>
+        <div>
+          <h3>Microsoft 365 & Entra ID Administration</h3>
+          <p>Microsoft Learn badge series — identity protection, secure user access, Teams app management</p>
+          <span class="status">Completed</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -453,7 +534,7 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
         <div class="remote-item"><div class="k">Backup connectivity</div><div class="v">5G mobile hotspot failover</div></div>
         <div class="remote-item"><div class="k">Workspace</div><div class="v">Quiet, dedicated home office</div></div>
         <div class="remote-item"><div class="k">Tools</div><div class="v">Teams, AnyDesk, TeamViewer, RDP</div></div>
-        <div class="remote-item"><div class="k">Availability</div><div class="v">Flexible shifts incl. AU/PH hours</div></div>
+        <div class="remote-item"><div class="k">Availability</div><div class="v">Flexible shifts incl. AU/PH/US hours</div></div>
       </div>
     </div>
   </div>
@@ -464,24 +545,24 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
     <div class="sec-head rv"><span class="no">08</span><h2>For Recruiters — Quick Answers</h2></div>
     <div class="faq rv">
       <details open>
-        <summary>What's your notice period?</summary>
-        <div class="a">Zero — I'm an immediate joiner and can start as soon as onboarding allows.</div>
+        <summary>What kind of role are you looking for?</summary>
+        <div class="a">I'm looking for a long-term role where I can take complete ownership of IT operations, implement modern security policies, and grow alongside a dynamic team. I'm ready to hit the ground running from Day 1!</div>
       </details>
       <details>
-        <summary>Can you work Australian or Philippine business hours?</summary>
-        <div class="a">Yes. From IST, Australian hours (AEST is +4:30 from IST) and Philippine hours (+2:30) mean an early-morning start for me, which I'm fully comfortable committing to as a regular schedule.</div>
+        <summary>What's your notice period?</summary>
+        <div class="a">Zero! I'm available immediately and ready to jump right into onboarding and start delivering value for your team right away.</div>
+      </details>
+      <details>
+        <summary>Can you work Australian, Philippine, or international business hours?</summary>
+        <div class="a">Absolutely! From IST, Australian (AEST) and Philippine hours are an easy early-morning schedule I'm 100% committed to, and I'm equally flexible for US overlap or global shift rotations.</div>
       </details>
       <details>
         <summary>Have you worked fully remotely before?</summary>
-        <div class="a">Yes — my freelance consulting was fully remote, and even in on-site roles the majority of my end-user support was delivered via AnyDesk, Quick Assist, and Teams to WFH staff and multi-site offices.</div>
+        <div class="a">Yes — remote IT is where I thrive! Between my freelance consulting brand (ByteBlitz) and supporting multi-site, WFH teams via AnyDesk, Quick Assist, and Teams, distributed collaboration is second nature to me.</div>
       </details>
       <details>
-        <summary>Can you work without supervision?</summary>
-        <div class="a">That's been my default. In both of my last full-time roles I was the only IT person in the organisation — I planned, prioritised, executed, and reported to management on my own performance.</div>
-      </details>
-      <details>
-        <summary>What kind of role are you looking for?</summary>
-        <div class="a">IT support / helpdesk / system administrator roles — L1/L2 support, Microsoft 365 administration, endpoint management, or MSP environments. Remote-first preferred, but open to hybrid and on-site too.</div>
+        <summary>Can you work independently without hand-holding?</summary>
+        <div class="a">100%. In both of my previous full-time roles, I operated as the sole IT administrator — proactively planning upgrades, resolving critical outages, enforcing security compliance, and reporting metrics directly to leadership.</div>
       </details>
     </div>
   </div>
@@ -489,8 +570,8 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
 
 <div class="cta" id="contact">
   <div class="wrap">
-    <h2>Let's talk.</h2>
-    <p>If you're looking for someone who can own IT support end to end from day one — without hand-holding — I'd love to show you how I work. Immediate joiner, zero notice period.</p>
+    <h2>Let's connect and build something reliable.</h2>
+    <p>If you need a reliable, certified, and highly motivated IT professional who can solve problems independently and bring positive energy to your team — I'd love to connect. Available immediately!</p>
     <div class="contact-row">
       <a class="chip primary" href="mailto:athiqkhan.edu@gmail.com">Email me</a>
       <a class="chip" href="https://linkedin.com/in/athiqurrehaman" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -504,8 +585,14 @@ footer{background:var(--ink);color:#7a8893;font-family:var(--mono);font-size:12p
 </footer>
 
 <script>
+// Scroll reveal animation for sections and cards
 const io = new IntersectionObserver((entries)=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
 },{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
